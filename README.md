@@ -38,6 +38,10 @@ online, though a [few of them](https://www.honolulu.hawaii.edu/sites/www2.honolu
 have room for improvement.
 
 
+## College-Ruled Paper
+Completely generic US-letter sized paper with slightly narrower line spacing than usually found. 
+
+
 ## Popcorn Accounting
 Cub scouts sell popcorn to raise funds. Sometimes they work at a specific
 commercial location like a restaurant or store, and they work in shifts. To
