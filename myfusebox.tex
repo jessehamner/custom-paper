@@ -1,0 +1,110 @@
+\documentclass[10pt]{article}
+\usepackage[left=1in,right=1in,top=0.75in,bottom=1in]{geometry} % never use the anysize package!
+\usepackage{amsmath, amssymb, fp}
+%\usepackage{mathpazo}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{multirow,multicol}
+%\usepackage{rotating}
+\usepackage{adjustbox}
+%\usepackage{array}
+%\usepackage{booktabs}
+%\usepackage{morefloats}
+\usepackage{tikz}
+%\usepackage[firstpage]{draftwatermark}
+%\usepackage[american, cuteinductors]{circuitikz}
+%\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{marvosym}
+
+\definecolor{webblue}{rgb}{0,0,0.75}
+
+\newcommand{\myaddress}{your address here!}
+
+\newcommand{\sep}{1mm}
+\newcommand{\negsep}{-4mm}
+\newcommand{\widesep}{7mm}
+\newcommand{\thisscale}{0.6}
+
+\newcommand{\+}{\item}		% easier than typing \item a lot
+%\setlength{\parindent}{0in}	% easier than putting \noindent at every paragraph
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bd}{\begin{description}}
+\newcommand{\ed}{\end{description}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\rr}{\raggedright}
+
+\begin{document}
+ 
+\thispagestyle{empty}
+
+\fcolorbox{lightgray}{white}{
+\begin{minipage}[c]{3.36in}
+
+\begin{tabular}{p{3.18in}}
+\hline\\[-3mm]
+\centering\Large Circuit Breakers\tabularnewline
+\centering\small{\color{webblue} \myaddress}\tabularnewline
+\\[-3mm]
+\hline
+\end{tabular}
+\smallskip
+
+
+\begin{tabular}{| c | p{1.19in} | p{1.19in} | c | }
+\hline\\[\negsep]
+1 & \multirow{2}{1.15in}{\centering A/C} & \multirow{2}{1.15in}{\centering oven} & 2  \\
+
+3 &  &  & 4  \\[\sep]
+\hline\\[\negsep]
+
+5 & \multirow{2}{1.15in}{\centering cooktop} & \multirow{2}{1.15in}{\centering dryer} & 6  \\
+7 &  &  & 8  \\ 
+\hline\\[\negsep]
+
+9  & dining room,  microwave & \centering heat & 10 \\[\sep]
+\hline\\[\negsep]
+
+11 & GFCI hall bath \& half bath, \& outlet on post outside half bath & living room / kitchen divider outlets; bay window outlet left side, living room lights & 12 \\[\sep]
+\hline\\[\negsep]
+
+13 & \centering washing machine receptacle % but not utility room lights 
+& GFCI garage, external outlets & 14 \\[\sep]
+\hline\\[\negsep]
+
+15 & \centering fridge & garage power, outlets in hall bath, hall lights  & 16 \\[\sep]
+\hline\\[\negsep]
+
+17 & Jacuzzi GFCI & back left bedroom & 18 \\[\sep]
+\hline\\[\negsep]
+
+19 & garbage disposal, dishwasher & kitchen lights & 20 \\[\sep]
+\hline\\[\negsep]
+
+21 & GFCI kitchen receptacles & MBR outlets, bath, closet; bay window right side outlets & 22 \\[\sep]
+\hline\\[\negsep]
+
+23 & GFCI master bath & smoke detector & 24 \\[\sep]
+\hline\\[\negsep]
+
+25 & \multirow{2}{1.15in}{\centering pool motor} & mid-hall bedroom, foyer, \& front porch lights & 26 \\[\sep]
+\cline{3-4}
+27 &  & front office \& half bath lights & 28 \\[\sep]
+\hline\\[\negsep]
+
+29 & \centering pool light & TV, half of MBR outlets & 30 \\[\sep]
+\hline
+
+\end{tabular}
+\smallskip
+
+\begin{footnotesize}
+The electricians who write ``plugs and lights" for half the circuits should be flogged.
+By the same token, the dumbasses who wire houses with half the outlets and none of the lights in one room on the same circuit should also be flogged.
+\end{footnotesize}
+
+\end{minipage}
+}
+\end{document}

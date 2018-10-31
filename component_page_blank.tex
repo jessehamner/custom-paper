@@ -1,0 +1,98 @@
+\documentclass[9pt]{memoir} % filofax personal pages are 95mm x 171mm
+\usepackage[paperheight=170mm,paperwidth=95mm,left=7mm, bottom=5mm, right=5mm, top=5mm]{geometry}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+% component page to fit Adafruit SMD component binders; 
+% these labels line up horizontally with the narrow pocket pages.
+% These pages are commercially available as "Filofax personal" sized 
+% and are punched to the same specs as the Adafruit binder. 
+% searching for 'B132451' or "filofax personal plain white" should produce
+% usable results for purchasing the packages, and should be less than USD $10
+
+\begin{document}
+
+% The default "BLUE" for the web links isn't much to my liking. 
+\definecolor{webblue}{rgb}{0,0,0.75}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{gray60}{gray}{0.6}
+
+% some table formatting shortcuts:
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\sep}{1mm}
+\newcommand{\jump}{3.9mm}
+\newcommand{\negsep}{-3mm}
+\newcommand{\thisscale}{1.6}
+\newcommand{\silkscale}{1.0}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+
+\pagestyle{empty}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+\tikzset{normal lines/.style={gray, very thin}} 
+\tikzset{mm lines/.style={gray, thin}} 
+
+\node at ([xshift=0mm, yshift=0mm] current page.south west){
+  \begin{tikzpicture}[remember picture, overlay]
+
+	\foreach \y in {0,1.44,2.88,...,15.84}
+	  \draw[style=mm lines](3mm, 10.5mm + \y cm) -- (9.2cm, 10.5mm  + \y cm);
+
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+
+\vspace{-0.17in}
+\hspace{-0.25in}
+\begin{tabular}{l l l l }
+
+Component & size & Manufacturer\\
+Value & Value & Value &  \\
+\multicolumn{4}{c}{part number}\\[\sep]
+
+Component & size & Manufacturer\\
+Value & Value & Value &  \\
+\multicolumn{4}{c}{part number}\\[\jump]
+
+Component & size & Manufacturer\\
+Value & Value & Value &  \\
+\multicolumn{4}{c}{part number}\\[\jump]
+
+Component & size & Manufacturer\\
+Value & Value & Value &  \\
+\multicolumn{4}{c}{part number}\\[\jump]
+
+Component & size & Manufacturer\\
+Value & Value & Value &  \\
+\multicolumn{4}{c}{part number}\\[\jump]
+
+Component & size & Manufacturer\\
+Value & Value & Value &  \\
+\multicolumn{4}{c}{part number}\\[\jump]
+
+Component & size & Manufacturer\\
+Value & Value & Value &  \\
+\multicolumn{4}{c}{part number}\\[\jump]
+
+Component & size & Manufacturer\\
+Value & Value & Value &  \\
+\multicolumn{4}{c}{part number}\\[\jump]
+
+Component & size & Manufacturer\\
+Value & Value & Value &  \\
+\multicolumn{4}{c}{part number}\\[\jump]
+
+Component & size & Manufacturer\\
+Value & Value & Value &  \\
+\multicolumn{4}{c}{part number}\\[\jump]
+
+Component & size & Manufacturer\\
+Value & Value & Value &  \\
+\multicolumn{4}{c}{part number}\\[\jump]
+
+\end{tabular}
+
+\end{document}

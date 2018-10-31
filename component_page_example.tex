@@ -1,0 +1,91 @@
+\documentclass[9pt]{memoir} % filofax personal pages are 95mm x 171mm
+\usepackage[paperheight=170mm,paperwidth=95mm,left=7mm, bottom=5mm, right=5mm, top=5mm]{geometry}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+% example component page
+
+\begin{document}
+
+% The default "BLUE" for the web links isn't much to my liking. 
+\definecolor{webblue}{rgb}{0,0,0.75}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{gray60}{gray}{0.6}
+
+% some table formatting shortcuts:
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\sep}{1mm}
+\newcommand{\jump}{3.9mm}
+\newcommand{\negsep}{-3mm}
+\newcommand{\thisscale}{1.6}
+\newcommand{\silkscale}{1.0}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+
+\pagestyle{empty}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+\tikzset{normal lines/.style={gray, very thin}} 
+\tikzset{mm lines/.style={gray, thin}} 
+
+\node at ([xshift=0mm, yshift=0mm] current page.south west){
+  \begin{tikzpicture}[remember picture, overlay]
+
+	\foreach \y in {0,1.44,2.88,...,15.84}
+	  \draw[style=mm lines](3mm, 10.5mm + \y cm) -- (9.2cm, 10.5mm  + \y cm);
+
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+
+\vspace{-0.17in}
+\hspace{-0.25in}
+\begin{tabular}{l l l l }
+
+Capacitor & 0805 & Kemet\\
+1uF & 16V & MLCC &  \\
+\multicolumn{4}{c}{399-1284-1-ND}\\[\sep]
+
+Capacitor & 0805 & Murata\\
+2.2uF & 25V & MLCC &  \\
+\multicolumn{4}{c}{GRM21BR71E225KA73L}\\[\jump]
+
+Capacitor & 0805 & TDK\\
+22uF & 16V & MLCC &  \\
+\multicolumn{4}{c}{C2012X5R1C226K125AC}\\[\jump]
+
+Capacitor & 0805 & Kemet\\
+0.47uF & 50V & MLCC &  \\
+\multicolumn{4}{c}{C0805474K5RACTU}\\[\jump]
+
+Capacitor & 0805 & AVX\\
+47uF & 10V & Tantalum & 20\%, 5 $\Omega$ \\
+\multicolumn{4}{c}{TLCR476M010XTA}\\[\jump]
+
+Capacitor & 0805 & Kemet\\
+4.7uF & 16V & Ceramic &   \\
+\multicolumn{4}{c}{C0805475K4PACTU}\\[\jump]
+
+Capacitor & 0805 & Kemet\\
+1uF & 25V & MLCC &  \\
+\multicolumn{4}{c}{C0805C105K3RACTU}\\[\jump]
+
+Capacitor & 0805 & Kemet\\
+3300pF & 50V & Ceramic &   \\
+\multicolumn{4}{c}{C0805C332K5RAC}\\[\jump]
+
+Capacitor & 0805 & Kemet\\
+470pF & 50V & Ceramic &   \\
+\multicolumn{4}{c}{C0805C471K5RAC}\\[\jump]
+
+Capacitor & 1210 & Murata\\
+22uF & 25V & MLCC & X7R  \\
+\multicolumn{4}{c}{GRM32ER71E226ME15L}\\[\jump]
+
+
+
+\end{tabular}
+
+\end{document}

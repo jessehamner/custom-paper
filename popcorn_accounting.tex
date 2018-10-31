@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage[left=0.45in,right=0.45in,top=0.45in,bottom=0.5in]{geometry} % never use the anysize package!
+\usepackage[table]{xcolor} 
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{amsmath, amssymb}
+
+
+\definecolor{webblue}{rgb}{0,0,0.75}
+\definecolor{webred}{rgb}{0.75,0,0}
+\definecolor{footlineblue}{rgb}{0.392,0.706,0.941}
+\definecolor{darkgreen}{rgb}{0.00,0.50,0.00}
+
+\newcommand{\qbox}[1]{\bigskip\fbox{\parbox{0.75\linewidth}{#1}}\\} 
+
+\newcommand{\cc}[1]{\cellcolor{#1}}
+\newcommand{\ccb}{\cc{blue!12}}
+\newcommand{\ccy}{\cc{yellow!35}}
+\newcommand{\ccg}{\cc{green!35}}
+\newcommand{\redact}{\cc{black!50}}
+
+
+\newcommand{\sep}{1mm}
+\newcommand{\negsep}{-4mm}
+\newcommand{\widesep}{7mm}
+
+\thispagestyle{plain}
+
+\begin{document}
+\thispagestyle{empty}
+
+{\LARGE\textbf{Cub Scout Popcorn Sales}}
+\medskip
+
+\begin{tabular}{p{1.90in} | p{1.90in} | p{1.90in} }
+\hline
+\textbf{Today's date:} & \textbf{Today's location:} & \textbf{Shift:} \\
+ & & \\
+ \hline
+ \end{tabular}
+
+\bigskip
+\textbf{Scouts Present:}
+\begin{enumerate}
+\item 
+\item 
+\item 
+\item
+\end{enumerate}
+
+\bigskip
+
+% Note these prices are for 2018 and are obviously subject to change.
+\begin{tabular}{| p{1.35in} | r | r | r | p{1.05in} | c | c |}
+\hline
+\multicolumn{7}{c}{\ccb\textbf{Product Accounting}}\\
+\hline
+\textbf{Product} & \textbf{Start} & \textbf{Sales} & \textbf{End} & \textbf{Per-unit cost} & \textbf{Subtotal} & \textbf{Balanced?}\\[\sep]
+\hline\hline
+Ultimate Butter & & & & 20 & & $\Box$ \\[\sep]
+\hline
+Microwave Kettle & & & & 25 & & $\Box$ \\[\sep]
+\hline
+Jalape\~no Cheddar & & & & 15 & & $\Box$ \\[\sep]
+\hline
+White Cheddar & & & & 15  & & $\Box$ \\[\sep]
+\hline
+Caramel & & & & 10  & & $\Box$ \\[\sep]
+\hline
+Premium Caramel & & & & 20  & & $\Box$ \\[\sep]
+\hline
+Salted Caramel & & & & 30 & & $\Box$ \\[\sep]
+\hline
+Cheese Lovers' & & & & 35 & & $\Box$ \\[\sep]
+\hline
+\ccy\textbf{Total} & \redact  & & \redact & \redact & & $\Box$ \\[\sep]
+\hline
+\end{tabular}
+
+\bigskip
+
+\begin{tabular}{| p{1.35in} | r | r | r | p{1.05in} | c | c |}
+\hline
+\multicolumn{7}{c}{\ccb\textbf{Cash Accounting}}\\
+\hline
+\textbf{Denomination} & \textbf{Start} & \textbf{Sales} & \textbf{End} & \textbf{Donations} & \textbf{Subtotal} & \textbf{Balanced?}\\[\sep]
+\hline\hline
+1 & & & & & & $\Box$ \\[\sep]
+\hline
+2 & & & & & & $\Box$ \\[\sep]
+\hline
+5 & & & & & & $\Box$ \\[\sep]
+\hline
+10 & & & & & & $\Box$ \\[\sep]
+\hline
+20 & & & & & & $\Box$ \\[\sep]
+\hline
+50 & & & & & & $\Box$ \\[\sep]
+\hline
+100 & & & & & & $\Box$ \\[\sep]
+\hline
+Coins & & & & & & $\Box$ \\[\sep]
+\hline
+\ccy\textbf{Total} &   &  &  &  & & $\Box$ \\[\sep]
+\hline
+\end{tabular}
+
+\bigskip
+
+\begin{tabular}{p{1.94in} p{1.94in} p{1.94in} }
+\hline
+\multicolumn{3}{c}{\ccb\textbf{Checks}}\\
+\hline
+1. & 4. & 7. \\
+2. & 5. & 8. \\
+3. & 6. & 9. \\
+\hline
+\end{tabular}
+
+
+\end{document}
