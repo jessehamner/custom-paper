@@ -1,0 +1,70 @@
+\documentclass[letterpaper,10pt]{article} % letter size paper, 215.9mm x 279.4mm
+\usepackage{tikz}
+
+\begin{document}
+\pagestyle{empty}
+
+% Custom colors:
+\definecolor{blueline}{rgb}{0.800,0.800,1.000}
+\definecolor{greenline}{rgb}{0.400,0.700,0.400}
+\pgfmathsetmacro{\xdim}{19}
+\pgfmathsetmacro{\ydim}{25}
+\pgfmathsetmacro{\ymax}{\ydim - \xdim}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+% Trying out a bunch of styles to add flexibility:
+\tikzset{normal lines/.style={gray, very thin}} 
+\tikzset{margin lines/.style={gray, thick}} 
+\tikzset{two divisions/.style={gray, thick}} 
+\tikzset{mm lines/.style={gray, ultra thin}}
+\tikzset{mm bluelines/.style={blueline, very thin}}
+\tikzset{mm greenlines/.style={greenline, very thin}}
+\tikzset{med lines/.style={gray, thin}} 
+\tikzset{master lines/.style={black, very thick}} 
+\tikzset{dashed master lines/.style={loosely dashed, black, very thick}} 
+
+% Set the lower left corner (origin)
+\node at ([xshift=15mm, yshift=10mm] current page.south west){
+
+  \begin{tikzpicture}[remember picture, overlay]
+
+    \draw[style=mm greenlines,step=5mm] (0,0) grid +(\xdim cm, \ydim cm); 
+    \draw[style=med lines,step=2.5cm] (0,0) grid +(\xdim cm, \ydim cm); 
+	\draw[style=two divisions,step=5.0cm] (0,0) grid +(\xdim cm, \ydim cm); 
+	\draw[style=master lines] (0,0) rectangle (\xdim cm, \ydim cm);
+
+% Draw 30/60-degree isometric lines:
+	
+	\foreach \x in {0,...,\xdim}
+		\draw[gray!50] (\x , 0 ) -- (\xdim, {\xdim - \x})
+	;
+		\foreach \y in {0,...,\ymax}
+			\draw[gray!50] (0 , \y ) -- (\xdim, {\y + \xdim})
+	;
+		\foreach \y in {\ymax,...,\ydim}
+			\draw[gray!50] (0 , \y ) -- ({\ydim - \y}, {\ydim})
+	;
+	
+
+	\foreach \x in {0,...,\xdim}
+		\draw[gray!50] (\x , \ydim ) -- (\xdim, {\ydim - (\xdim - \x)*0.5})
+	;
+
+
+%	\foreach \y in {\ydim,...,\xdim}
+%		\draw[red, thick] (0, \y ) -- (\xdim, )
+%	;
+	
+
+
+
+
+  \end{tikzpicture}
+};
+
+\end{tikzpicture}
+
+% Hello, world!
+
+\end{document}

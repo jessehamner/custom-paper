@@ -1,0 +1,84 @@
+\documentclass{memoir}
+\usepackage[left=0.7in,right=0.7in,top=0.5in,bottom=0.5in]{geometry} % never use the anysize package!
+\usepackage[table]{xcolor} 
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+
+\definecolor{webblue}{rgb}{0,0,0.75}
+\definecolor{webred}{rgb}{0.75,0,0}
+\definecolor{footlineblue}{rgb}{0.392,0.706,0.941}
+\definecolor{darkgreen}{rgb}{0.00,0.50,0.00}
+
+\newcommand{\qbox}[1]{\bigskip\fbox{\parbox{0.75\linewidth}{#1}}\\} 
+
+\newcommand{\cc}[1]{\cellcolor{#1}}
+\newcommand{\ccb}{\cc{blue!12}}
+\newcommand{\ccy}{\cc{yellow!35}}
+\newcommand{\ccg}{\cc{green!35}}
+\newcommand{\redact}{\cc{black!50}}
+
+
+\newcommand{\sep}{1mm}
+\newcommand{\negsep}{-4mm}
+\newcommand{\widesep}{7mm}
+
+\thispagestyle{plain}
+
+\begin{document}
+\thispagestyle{empty}
+\renewcommand{\arraystretch}{1.5}
+
+{\LARGE\textbf{Phase 10 Scorecard}}
+\medskip
+
+\begin{tabular}{| p{0.6in} || p{0.55in} | p{0.5in} || p{0.55in} | p{0.5in} || p{0.55in} | p{0.5in} || p{0.55in} | p{0.5in} ||}
+\hline
+\cc{gray!20}Name:  & \multicolumn{2}{c||}{~ ~}  & \multicolumn{2}{c||}{~ ~} & \multicolumn{2}{c||}{~} & \multicolumn{2}{c||}{~} \\
+\hline
+\centering Won the & \centering Phase  &  & \centering Phase  &  & \centering Phase  &  & \centering  Phase  & \\
+\centering Round & Finished & \centering Score  & Finished & \centering Score  & Finished & \centering Score  & Finished &  ~~Score \\
+\midrule\midrule &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline
+\end{tabular}
+
+\vspace{0.85in}
+
+{\LARGE\textbf{Phase 10 Scorecard}}
+\medskip
+
+\begin{tabular}{| p{0.6in} || p{0.55in} | p{0.5in} || p{0.55in} | p{0.5in} || p{0.55in} | p{0.5in} || p{0.55in} | p{0.5in} ||}
+\hline
+\cc{gray!20}Name:  & \multicolumn{2}{c||}{~ ~}  & \multicolumn{2}{c||}{~ ~} & \multicolumn{2}{c||}{~} & \multicolumn{2}{c||}{~} \\
+\hline
+\centering Won the & \centering Phase  &  & \centering Phase  &  & \centering Phase  &  & \centering  Phase  & \\
+\centering Round & Finished & \centering Score  & Finished & \centering Score  & Finished & \centering Score  & Finished &  ~~Score \\
+\midrule\midrule &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline &&&&&&&&\\
+\hline
+\end{tabular}
+
+\end{document}
