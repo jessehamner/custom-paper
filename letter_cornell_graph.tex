@@ -2,31 +2,25 @@
 % 215.9mm × 279.4mm
 \usepackage{tikz}
 
-
 \begin{document}
 \pagestyle{empty}
 
 \begin{tikzpicture}[remember picture, overlay]
 
-\tikzset{normal lines/.style={gray, very thin}} 
-\tikzset{margin lines/.style={gray, thick}} 
-\tikzset{mm lines/.style={gray, ultra thin}} 
-\tikzset{strong lines/.style={black, very thin}} 
-\tikzset{master lines/.style={black, very thick}} 
-\tikzset{dashed master lines/.style={loosely dashed, black, very thick}} 
+\tikzset{normal lines/.style={gray, thin}} 
 
 \node at (current page.south west){
   \begin{tikzpicture}[remember picture, overlay]
 
-    \draw[style=normal lines] (0,2in)--(8.5in,2in);
-    \draw[style=normal lines] (2.5in,2in)--(2.5in,11in);
+    \draw[style=normal lines] (0, 2in) -- (8.5in, 2in);
+    \draw[style=normal lines] (2.5in, 2in) -- (2.5in, 11in);
 
-    \draw[style=normal lines,step=0.25in] (2.5in,2in) grid (8.5in,10in);
+     \foreach \x in {2.6, 2.8, 3.0, 3.2,..., 8.2}
+         \foreach \y in {2.2, 2.4, 2.6,...,11}
+             \draw[color=gray!50, thick](\x in, \y in) circle [radius=0.005in];
 
   \end{tikzpicture}
 };
 \end{tikzpicture}
-
-
 
 \end{document}
