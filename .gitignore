@@ -1,6 +1,7 @@
 
 ## Sandbox:
 sandbox.*
+address.txt
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
@@ -14,6 +15,7 @@ sandbox.*
 *.fot
 *.cb
 *.cb2
+*.dvi
 
 ## Build tool auxiliary files:
 *.fdb_latexmk
